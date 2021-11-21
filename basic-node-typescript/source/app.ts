@@ -1,5 +1,12 @@
 import fastify from 'fastify'
 
+interface CreateUserBody {
+    username: string
+    name: string
+    surname: string
+    address?: string
+}
+
 const buildFastifyApp = (options = {}) => {
     const app = fastify(options)
     
@@ -12,9 +19,13 @@ const buildFastifyApp = (options = {}) => {
         }
     })
     
-    // app.listen(3000, () => {
-    //     console.log('app is listen on port 3000')
-    // })
+    app.post<{ Body: CreateUserBody }>('/users', async (request) => {
+        const { username, name } = request.body
+        return {
+            username,
+            name
+        }
+    })
 
     return app 
  

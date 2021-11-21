@@ -17,6 +17,18 @@ npm run dev
 
 ## insert api 
 
-app.get
+###### app.get
 
 http://localhost:3000?username=IOsonoTAN&name=Tan
+
+###### app.post
+
+http://localhost:3000/users
+
+```json
+{
+    "username": "IOsonoTAN",
+    "name": "Krissada"
+}
+```
+
