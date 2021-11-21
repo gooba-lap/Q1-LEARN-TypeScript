@@ -14,3 +14,9 @@ npm i -D ts-node
 ## run
 
 npm run dev 
+
+## insert api 
+
+app.get
+
+http://localhost:3000?username=IOsonoTAN&name=Tan
