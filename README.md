@@ -28,7 +28,8 @@ http://localhost:3000/users
 ```json
 {
     "username": "IOsonoTAN",
-    "name": "Krissada"
+    "name": "Krissada",
+    "age": 30
 }
 ```
 

@@ -1,10 +1,17 @@
 import fastify from 'fastify'
+import { minusNumbers } from './helpers'
 
 interface CreateUserBody {
-    username: string
+    username: string 
     name: string
-    surname: string
-    address?: string
+    surname: string 
+    address: string 
+    age: number
+}
+
+interface CalculateMinusNumbers {
+    number1: number
+    number2: number
 }
 
 const buildFastifyApp = (options = {}) => {
@@ -20,10 +27,20 @@ const buildFastifyApp = (options = {}) => {
     })
     
     app.post<{ Body: CreateUserBody }>('/users', async (request) => {
-        const { username, name } = request.body
+        const { username, name, age } = request.body
         return {
             username,
-            name
+            name,
+            age
+        }
+    })
+
+    app.post<{ Body: CalculateMinusNumbers }>('/calculate/minus', async (request) => {
+        const { number1, number2 } = request.body
+        const { result } = minusNumbers(number1, number2)
+         
+        return {
+            result
         }
     })
 
