@@ -1,5 +1,7 @@
- 🚀 How to work with TypeScript? Why is it very hottest language and growing up fast?
- 🚀 https://www.youtube.com/watch?v=BscWSqg8WLY
+## How to work with TypeScript? Why is it very hottest language and growing up fast?
+
+🚀  origin : https://www.youtube.com/watch?v=BscWSqg8WLY
+<br />
 
 ## set environment
 
